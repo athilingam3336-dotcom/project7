@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Registration Successful</title>
+
+<style>
+
+*{
+
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,Helvetica,sans-serif;
+
+}
+
+body{
+
+background:linear-gradient(135deg,#10b981,#14b8a6);
+
+height:100vh;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+}
+
+.card{
+
+background:white;
+
+padding:35px;
+
+width:420px;
+
+border-radius:12px;
+
+box-shadow:0 10px 25px rgba(0,0,0,.2);
+
+text-align:center;
+
+}
+
+h1{
+
+color:#16a34a;
+
+margin-bottom:20px;
+
+}
+
+p{
+
+margin:10px 0;
+
+font-size:18px;
+
+}
+
+button{
+
+margin-top:25px;
+
+padding:12px 20px;
+
+background:#2563eb;
+
+border:none;
+
+color:white;
+
+font-size:16px;
+
+border-radius:8px;
+
+cursor:pointer;
+
+}
+
+button:hover{
+
+background:#1d4ed8;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="card">
+
+<h1>Registration Successful 🎉</h1>
+
+<p>
+
+<b>Name :</b>
+
+<span id="name"></span>
+
+</p>
+
+<p>
+
+<b>Roll Number :</b>
+
+<span id="roll"></span>
+
+</p>
+
+<button onclick="goHome()">
+
+Register Another Student
+
+</button>
+
+</div>
+
+<script>
+
+document.getElementById("name").innerText=
+
+localStorage.getItem("studentName");
+
+document.getElementById("roll").innerText=
+
+localStorage.getItem("studentRoll");
+
+function goHome(){
+
+window.location.href="index.html";
+
+}
+
+</script>
+
+</body>
+</html>
